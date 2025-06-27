@@ -22,10 +22,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </style>
 </head>
 <body class="flex items-center justify-center min-h-screen p-4">
-  <!-- Google Tag Manager (noscript) -->
+    <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQ9KR3MQ"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+
     <div class="bg-white p-8 rounded-lg shadow-xl max-w-lg w-full text-center transform transition-all duration-300 hover:scale-105">
         <h1 class="text-4xl font-extrabold text-gray-900 mb-4 leading-tight">
             Ready to Download?
@@ -34,31 +35,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             Click the button below to get your free E-Book.
         </p>
 
-        <!-- Download button - clicking this will open the PDF in a new tab and then redirect to the thank you page -->
-        <button
-            id="downloadButton"
-            class="bg-green-600 text-white py-3 px-8 rounded-md font-bold text-xl hover:bg-green-700 focus:outline-none focus:ring-4 focus:ring-green-300 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg"
+        <!-- Download link - clicking this will open the PDF in a new tab (or download it) and then redirect to the thank you page -->
+        <a
+            href="https://cdn.bookey.app/files/pdf/book/en/life-101.pdf"
+            id="downloadLink"
+            target="_blank"
+            download="Life-101-Ebook.pdf"
+            class="inline-block bg-green-600 text-white py-3 px-8 rounded-md font-bold text-xl hover:bg-green-700 focus:outline-none focus:ring-4 focus:ring-green-300 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg"
         >
             Download E-Book Now
-        </button>
+        </a>
 
         <p class="text-gray-500 text-sm mt-6">
-            If your download doesn't start automatically, please click the button again.
+            If your download doesn't start automatically, please click the link again.
         </p>
     </div>
 
     <script>
-        document.getElementById('downloadButton').addEventListener('click', function() {
-            // URL of the PDF to be opened
-            const pdfUrl = 'https://cdn.bookey.app/files/pdf/book/en/life-101.pdf';
-
-            // Open the PDF in a new tab
-            window.open(pdfUrl, '_blank');
-
-            // Redirect to the thank you page after a short delay
+        // Get the download link element
+        document.getElementById('downloadLink').addEventListener('click', function() {
+            // After the link is clicked (and the PDF is handled by the browser),
+            // redirect to the thank you page after a short delay.
+            // This allows the browser to initiate the download/open before changing the page.
             setTimeout(() => {
                 window.location.href = 'thankyou.html';
-            }, 1000); // Redirect after 1 second (give time for the new tab to open)
+            }, 1000); // Redirect after 1 second
         });
     </script>
 </body>
