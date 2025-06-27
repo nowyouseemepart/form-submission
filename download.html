@@ -34,7 +34,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             Click the button below to get your free E-Book.
         </p>
 
-        <!-- Download button - clicking this will simulate a download and then redirect to the thank you page -->
+        <!-- Download button - clicking this will open the PDF in a new tab and then redirect to the thank you page -->
         <button
             id="downloadButton"
             class="bg-green-600 text-white py-3 px-8 rounded-md font-bold text-xl hover:bg-green-700 focus:outline-none focus:ring-4 focus:ring-green-300 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg"
@@ -49,14 +49,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <script>
         document.getElementById('downloadButton').addEventListener('click', function() {
-            // Simulate a file download (e.g., by opening a dummy file or link)
-            // In a real scenario, you'd replace this with a link to your actual file
-            // For demonstration, we'll just redirect to the thank you page after a small delay.
-            console.log("Simulating download...");
-            // You might add a small delay here for a more realistic feel
+            // URL of the PDF to be opened
+            const pdfUrl = 'https://cdn.bookey.app/files/pdf/book/en/life-101.pdf';
+
+            // Open the PDF in a new tab
+            window.open(pdfUrl, '_blank');
+
+            // Redirect to the thank you page after a short delay
             setTimeout(() => {
                 window.location.href = 'thankyou.html';
-            }, 500); // Redirect after 0.5 seconds
+            }, 1000); // Redirect after 1 second (give time for the new tab to open)
         });
     </script>
 </body>
