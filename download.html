@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TQ9KR3MQ');</script>
+<!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Your Resource</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Light gray background */
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQ9KR3MQ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <div class="bg-white p-8 rounded-lg shadow-xl max-w-lg w-full text-center transform transition-all duration-300 hover:scale-105">
+        <h1 class="text-4xl font-extrabold text-gray-900 mb-4 leading-tight">
+            Ready to Download?
+        </h1>
+        <p class="text-gray-700 text-lg mb-8">
+            Click the button below to get your free E-Book.
+        </p>
+
+        <!-- Download button - clicking this will simulate a download and then redirect to the thank you page -->
+        <button
+            id="downloadButton"
+            class="bg-green-600 text-white py-3 px-8 rounded-md font-bold text-xl hover:bg-green-700 focus:outline-none focus:ring-4 focus:ring-green-300 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg"
+        >
+            Download E-Book Now
+        </button>
+
+        <p class="text-gray-500 text-sm mt-6">
+            If your download doesn't start automatically, please click the button again.
+        </p>
+    </div>
+
+    <script>
+        document.getElementById('downloadButton').addEventListener('click', function() {
+            // Simulate a file download (e.g., by opening a dummy file or link)
+            // In a real scenario, you'd replace this with a link to your actual file
+            // For demonstration, we'll just redirect to the thank you page after a small delay.
+            console.log("Simulating download...");
+            // You might add a small delay here for a more realistic feel
+            setTimeout(() => {
+                window.location.href = 'thankyou.html';
+            }, 500); // Redirect after 0.5 seconds
+        });
+    </script>
+</body>
+</html>
